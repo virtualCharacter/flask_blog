@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/detail.css')) }}">
+{% endblock %}
+
+{% block title %}
+    博客详情
+{% endblock %}
+
+{% block main %}
+    <div class="blog-info">
+        <p class="blog-title">{{ blog.title }}</p>
+        <span class="blog-author">作者:{{ blog.user.username }}   </span>
+        <span class="blog-time">时间:{{ moment(blog.pub_time).format('YYYY-M-D') }}</span>
+    </div>
+    <div class="blog-article">
+        <p>{{ blog.article }}</p>
+    </div>
+    <h4 class="comment-title">评论({{ length }})</h4>
+    <form action="{{ url_for('main.add_comment') }}" method="post">
+        <input type="text" class="comment-text" placeholder="请填写评论" name="comment_text">
+        <input type="hidden" name="blog_id" value="{{ blog.id }}">
+        <button class="btn btn-primary">评论</button>
+    </form>
+    <hr>
+    <ul class="comment-content">
+        {% for comment in comments %}
+            <li>
+                <div class="comment-info">
+                    <span class="comment-user">ID:{{ comment.user.username }}</span>
+                    <span class="comment-time">
+                        {{ moment(comment.comment_time).format('YYYY-M-D') }}</span>
+                </div>
+                <div class="comment-info2">
+                    <p>{{ comment.comment_text }}</p>
+                </div>
+
+            </li>
+        {% endfor %}
+
+    </ul>
+{% endblock %}

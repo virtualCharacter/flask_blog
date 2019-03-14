@@ -1,0 +1,37 @@
+.main ul{
+    list-style: none;
+    padding-left: 0;
+}
+.main ul li {
+    overflow: hidden;
+    border-bottom: black 2px solid;
+    padding: 10px 0;
+}
+.blog-group{
+    float: left;
+    margin-left: 10px;
+    width: 710px;
+}
+.blog-title a {
+    font-size: 18px;
+    color: blue;
+}
+.blog-abstract{
+    font-size: 16px;
+    color: black;
+}
+.blog-info {
+    float: bottom;
+    text-align: right;
+    margin-left: 10px;
+
+}
+.blog-author{
+    font-size: 16px;
+    color: black;
+}
+.blog-time{
+    font-size: 16px;
+    color: black;
+    margin-right: 20px;
+}

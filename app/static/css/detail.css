@@ -1,0 +1,49 @@
+.blog-info{
+    padding: 10px 10px;
+    border-bottom: black 2px solid;
+}
+.blog-title{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+.blog-author{
+    font-size: 14px;
+    color: black;
+}
+.blog-time{
+    font-size: 14px;
+    color: black;
+}
+.blog-article{
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    border-bottom: black 2px solid;
+}
+.comment-title{
+    margin-left: 10px;
+    color: black;
+}
+.comment-text{
+    width: 400px;
+    height: 42px;
+}
+.comment-content{
+    list-style: none;
+    padding-left: 0;
+    color: black;
+}
+.comment-content li{
+    border-bottom: blueviolet 1px solid;
+    padding: 10px 0;
+}
+.comment-info{
+    margin: 10px;
+}
+.comment-time{
+    float: right;
+}
+.comment-info2{
+    margin-left: 10px;
+}
